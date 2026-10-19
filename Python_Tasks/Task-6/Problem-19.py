@@ -1,0 +1,20 @@
+# Company Logo
+# https://www.hackerrank.com/challenges/most-commons/problem
+
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+from collections import Counter
+
+
+
+if __name__ == '__main__':
+    s = input()
+    word_count = Counter(s)
+    
+    for char, freq in sorted(word_count.items(), key=lambda x: (-x[1], x[0]))[:3]:
+        print(char, freq)
